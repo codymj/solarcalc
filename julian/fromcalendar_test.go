@@ -9,10 +9,10 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-// TestFromCalendar
+// TestFromCalendar tests FromCalendar()
 func TestFromCalendar(t *testing.T) {
 	// stub
-	timeStr := "2000-01-01T18:11:10Z"
+	timeStr := "2000-01-01T18:11:10-01:00"
 	tm, err := time.Parse(time.RFC3339, timeStr)
 	require.NoError(t, err)
 
@@ -20,5 +20,5 @@ func TestFromCalendar(t *testing.T) {
 	jd := FromCalendar(tm)
 
 	// assertion
-	assert.Equal(t, 2.4515452577546295e+06, jd)
+	assert.Equal(t, 2.451545216087963e+06, jd)
 }
