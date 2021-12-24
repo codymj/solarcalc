@@ -1,3 +1,3 @@
 # solarcalc
 
-A Go library for calculating certain solar phenomena in relation to terrestrial position.
+A Go library for calculating certain phenomena in relation to the solar system.
