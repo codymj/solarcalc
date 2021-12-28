@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// TestTrueAnomaly tests MeanAnomaly()
+// TestTrueAnomaly tests TrueAnomaly()
 func TestTrueAnomaly(t *testing.T) {
 	// stub
 	jd := 2453097.0
