@@ -4,6 +4,12 @@ import (
 	"time"
 )
 
+const (
+	SecondsPerDay = 86400.0
+	MinutesPerDay = 1440.0
+	HoursPerDay   = 24.0
+)
+
 // FromCalendar converts a calendar datetime into a Julian day
 //
 // t - time
