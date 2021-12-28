@@ -16,10 +16,7 @@ const (
 )
 
 // TrueAnomaly is the sum of the mean anomaly (M) and equation of center (C).
-//
-// C - equation of center result
-//
-// v - true anomaly (v = C + M)
+//	v: true anomaly (v = C + M)
 func TrueAnomaly(jd float64) (v float64) {
 	M := MeanAnomaly(jd)
 	MRad := M * DegreeToRadian

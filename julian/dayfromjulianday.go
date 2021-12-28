@@ -3,10 +3,8 @@ package julian
 import "math"
 
 // DayFromJulianDay calculates the day number of a solar year from Julian day.
-//
-// jd - Julian day
-//
-// dn - day number
+// 	jd: Julian day
+// 	dn: day number
 func DayFromJulianDay(jd float64) (dn uint) {
 	z := math.Floor(jd + 0.5)
 	f := jd + 0.5 - z

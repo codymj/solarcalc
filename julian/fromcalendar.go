@@ -11,10 +11,8 @@ const (
 )
 
 // FromCalendar converts a calendar datetime into a Julian day
-//
-// t - time
-//
-// jd - Julian day
+// 	t: time
+// 	jd: Julian day
 func FromCalendar(t time.Time) (jd float64) {
 	A := (1461 * (t.Year() + 4800 + (int(t.Month())-14)/12)) / 4
 	B := (367 * (int(t.Month()) - 2 - 12*((int(t.Month())-14)/12))) / 12
