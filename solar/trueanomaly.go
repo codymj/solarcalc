@@ -15,8 +15,9 @@ const (
 	C6Earth = 0.0000
 )
 
-// TrueAnomaly is the sum of the mean anomaly (M) and equation of center (C).
-//	v: true anomaly (v = C + M)
+// TrueAnomaly (v) is the sum of the mean anomaly (M) and the result from the
+// equation of center (C).
+//	jd: Julian day
 func TrueAnomaly(jd float64) (v float64) {
 	M := MeanAnomaly(jd)
 	MRad := M * DegreeToRadian

@@ -1,16 +1,6 @@
 package solar
 
 const (
-	Mercury = iota
-	Venus   = iota
-	Earth   = iota
-	Mars    = iota
-	Jupiter = iota
-	Saturn  = iota
-	Uranus  = iota
-	Neptune = iota
-	Pluto   = iota
-
 	PiMercury = 230.3265
 	PiVenus   = 73.7576
 	PiEarth   = 102.9373
@@ -22,8 +12,8 @@ const (
 	PiPluto   = 184.5484
 )
 
-// EclipticLongitude is the plane of the orbit of the planet relative to the
-// angle of its orbit.
+// EclipticLongitude (Pi) is the plane of the orbit of the planet relative to
+// the angle of its orbit.
 // 	p: enum of the planet:
 // 		0 = Mercury
 //		1 = Venus
@@ -34,7 +24,6 @@ const (
 // 		6 = Uranus
 //		7 = Neptune
 //		8 = Pluto
-// 	Pi: Ecliptic longitude
 func EclipticLongitude(p int) (Pi float64) {
 	switch p {
 	case 0:
