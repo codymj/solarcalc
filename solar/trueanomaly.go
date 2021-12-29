@@ -1,31 +1,21 @@
 package solar
 
-import (
-	"math"
-)
-
-const (
-	DegreeToRadian = math.Pi / 180
-
-	C1Earth = 1.9148
-	C2Earth = 0.0200
-	C3Earth = 0.0003
-	C4Earth = 0.0000
-	C5Earth = 0.0000
-	C6Earth = 0.0000
-)
-
 // TrueAnomaly (v) is the sum of the mean anomaly (M) and the result from the
 // equation of center (C).
 //	jd: Julian day
-func TrueAnomaly(jd float64) (v float64) {
-	M := MeanAnomaly(jd)
-	MRad := M * DegreeToRadian
+//	p: enum of the planet:
+// 		0 = Mercury
+//		1 = Venus
+//		2 = Earth
+//		3 = Mars
+//		4 = Jupiter
+//		5 = Saturn
+// 		6 = Uranus
+//		7 = Neptune
+//		8 = Pluto
+func TrueAnomaly(jd float64, p int) (v float64) {
+	M := MeanAnomaly(jd, p)
+	C := EquationOfCenter(jd, p)
 
-	C := C1Earth*math.Sin(MRad) + C2Earth*math.Sin(2*MRad) +
-		C3Earth*math.Sin(3*MRad) + C4Earth*math.Sin(4*MRad) +
-		C5Earth*math.Sin(5*MRad) + C6Earth*math.Sin(6*MRad)
-
-	v = M + C
-	return
+	return M + C
 }
