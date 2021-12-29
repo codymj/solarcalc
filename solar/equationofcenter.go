@@ -18,7 +18,7 @@ import "math"
 //		8 = Pluto
 func EquationOfCenter(jd float64, p int) (C float64) {
 	M := MeanAnomaly(jd, p)
-	MRad := M * DegreeToRadian
+	MRad := M * RAD
 
 	switch p {
 	case 0:
