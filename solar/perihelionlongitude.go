@@ -1,17 +1,5 @@
 package solar
 
-const (
-	wMercury = 230.3265
-	wVenus   = 73.7576
-	wEarth   = 102.9373
-	wMars    = 71.0041
-	wJupiter = 237.1015
-	wSaturn  = 99.4587
-	wUranus  = 5.4634
-	wNeptune = 182.2100
-	wPluto   = 184.5484
-)
-
 // PerihelionLongitude (w) is the sum of the longitude of ascending node
 // (measured on the ecliptic plane) and the argument of periapsis (measured on
 // the orbital plane).
@@ -28,23 +16,23 @@ const (
 func PerihelionLongitude(p int) (w float64) {
 	switch p {
 	case 0:
-		w = wMercury
+		w = WMercury
 	case 1:
-		w = wVenus
+		w = WVenus
 	case 2:
-		w = wEarth
+		w = WEarth
 	case 3:
-		w = wMars
+		w = WMars
 	case 4:
-		w = wJupiter
+		w = WJupiter
 	case 5:
-		w = wSaturn
+		w = WSaturn
 	case 6:
-		w = wUranus
+		w = WUranus
 	case 7:
-		w = wNeptune
+		w = WNeptune
 	case 8:
-		w = wPluto
+		w = WPluto
 	}
 
 	return

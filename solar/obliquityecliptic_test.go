@@ -15,5 +15,5 @@ func TestObliquityEcliptic(t *testing.T) {
 	e := ObliquityEcliptic(p)
 
 	// assertion
-	assert.Equal(t, eEarth, e)
+	assert.Equal(t, EEarth, e)
 }

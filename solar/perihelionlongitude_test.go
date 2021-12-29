@@ -15,5 +15,5 @@ func TestPerihelionLongitude(t *testing.T) {
 	w := PerihelionLongitude(p)
 
 	// assertion
-	assert.Equal(t, wEarth, w)
+	assert.Equal(t, WEarth, w)
 }
