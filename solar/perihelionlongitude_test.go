@@ -12,8 +12,8 @@ func TestPerihelionLongitude(t *testing.T) {
 	p := 2
 
 	// invocation
-	Pi := PerihelionLongitude(p)
+	w := PerihelionLongitude(p)
 
 	// assertion
-	assert.Equal(t, PiEarth, Pi)
+	assert.Equal(t, wEarth, w)
 }

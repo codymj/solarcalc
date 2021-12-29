@@ -1,19 +1,20 @@
 package solar
 
 const (
-	PiMercury = 230.3265
-	PiVenus   = 73.7576
-	PiEarth   = 102.9373
-	PiMars    = 71.0041
-	PiJupiter = 237.1015
-	PiSaturn  = 99.4587
-	PiUranus  = 5.4634
-	PiNeptune = 182.2100
-	PiPluto   = 184.5484
+	wMercury = 230.3265
+	wVenus   = 73.7576
+	wEarth   = 102.9373
+	wMars    = 71.0041
+	wJupiter = 237.1015
+	wSaturn  = 99.4587
+	wUranus  = 5.4634
+	wNeptune = 182.2100
+	wPluto   = 184.5484
 )
 
-// PerihelionLongitude (Pi) is the plane of the orbit of the planet relative to
-// the angle of its orbit.
+// PerihelionLongitude (w) is the sum of the longitude of ascending node
+// (measured on the ecliptic plane) and the argument of periapsis (measured on
+// the orbital plane).
 // 	p: enum of the planet:
 // 		0 = Mercury
 //		1 = Venus
@@ -24,26 +25,26 @@ const (
 // 		6 = Uranus
 //		7 = Neptune
 //		8 = Pluto
-func PerihelionLongitude(p int) (Pi float64) {
+func PerihelionLongitude(p int) (w float64) {
 	switch p {
 	case 0:
-		Pi = PiMercury
+		w = wMercury
 	case 1:
-		Pi = PiVenus
+		w = wVenus
 	case 2:
-		Pi = PiEarth
+		w = wEarth
 	case 3:
-		Pi = PiMars
+		w = wMars
 	case 4:
-		Pi = PiJupiter
+		w = wJupiter
 	case 5:
-		Pi = PiSaturn
+		w = wSaturn
 	case 6:
-		Pi = PiUranus
+		w = wUranus
 	case 7:
-		Pi = PiNeptune
+		w = wNeptune
 	case 8:
-		Pi = PiPluto
+		w = wPluto
 	}
 
 	return
