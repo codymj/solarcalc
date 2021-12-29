@@ -6,10 +6,8 @@ import (
 	"github.com/codymj/solarcalc/julian"
 )
 
-const ()
-
-// MeanAnomaly (M) calculates the position that the Earth would have relative to
-// its perihelion if the orbit were a circle.
+// MeanAnomaly (M) calculates the position that the planet would have relative
+// to its perihelion if the orbit were a circle.
 // 	jd: Julian day
 //	p: enum of the planet:
 // 		0 = Mercury
