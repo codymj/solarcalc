@@ -6,13 +6,13 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// TestEclipticLongitude tests EclipticLongitude()
-func TestEclipticLongitude(t *testing.T) {
+// TestPerihelionLongitude tests PerihelionLongitude()
+func TestPerihelionLongitude(t *testing.T) {
 	// stub
 	p := 2
 
 	// invocation
-	Pi := EclipticLongitude(p)
+	Pi := PerihelionLongitude(p)
 
 	// assertion
 	assert.Equal(t, PiEarth, Pi)

@@ -12,7 +12,7 @@ const (
 	PiPluto   = 184.5484
 )
 
-// EclipticLongitude (Pi) is the plane of the orbit of the planet relative to
+// PerihelionLongitude (Pi) is the plane of the orbit of the planet relative to
 // the angle of its orbit.
 // 	p: enum of the planet:
 // 		0 = Mercury
@@ -24,7 +24,7 @@ const (
 // 		6 = Uranus
 //		7 = Neptune
 //		8 = Pluto
-func EclipticLongitude(p int) (Pi float64) {
+func PerihelionLongitude(p int) (Pi float64) {
 	switch p {
 	case 0:
 		Pi = PiMercury
